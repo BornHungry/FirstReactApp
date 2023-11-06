@@ -4,7 +4,6 @@ import Form from "./Form";
 import Button from "./Button";
 function Contact() {
   const [contacts, setContacts] = useState([]);
-  const [number, setNumber] = useState(0);
   useEffect(() => {
     const localContactData = JSON.parse(localStorage.getItem("contact"));
     if (localContactData) {
