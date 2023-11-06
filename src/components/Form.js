@@ -33,7 +33,7 @@ function Form({ addContact, contact }) {
           <input
             className="jobdefiniation"
             name="jobdefiniation"
-            placeholder="İş Tanımı"
+            placeholder="Job description"
             // value değeri en başta boş olduğu için sayfa açıldığğında boş gelecek ve her submit olduğunda tekrardan boşa eşitlenecek
             value={form.jobdefiniation}
             // onChange eventi inputtaki değişim eventini kontrol eder.

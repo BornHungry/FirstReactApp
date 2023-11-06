@@ -3,6 +3,7 @@ import Contactlist from "./Contactlist";
 import Form from "./Form";
 import Button from "./Button";
 import Header from "./Header";
+import Footer from "./Footer";
 function Contact() {
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
@@ -46,6 +47,7 @@ function Contact() {
       <small>
         <strong>{`${priece.length} `} job</strong> left to complete
       </small>
+      <Footer />
     </div>
   );
 }
