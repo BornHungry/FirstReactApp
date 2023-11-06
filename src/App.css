@@ -68,3 +68,17 @@
     color: #007bff;
     padding: 28px;
 }
+
+@media screen and (max-width:768px) {
+    .app {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    .app {
+        width: 100%;
+    }
+
+}
