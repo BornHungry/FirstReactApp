@@ -27,8 +27,8 @@ function Form({ addContact, contact }) {
 
   return (
     <>
-      <div>{/* // EN SON SEÇİLEN ÖĞELERİ SİLME ÜZERİNE ÇALIŞIYORDUN */}</div>
-      <form onSubmit={onSubmit}>
+      {/* <div>// EN SON SEÇİLEN ÖĞELERİ SİLME ÜZERİNE ÇALIŞIYORDUN</div> */}
+      <form className="form-element" onSubmit={onSubmit}>
         <div>
           <input
             className="jobdefiniation"

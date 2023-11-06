@@ -44,8 +44,7 @@ function Contact() {
       </div>
       <Contactlist contacts={contacts} updateContact={setContacts} />
       <small>
-        Tamamlanması gereken <strong>{`${priece.length} `} tane</strong> iş
-        kaldı
+        <strong>{`${priece.length} `} job</strong> left to complete
       </small>
     </div>
   );
