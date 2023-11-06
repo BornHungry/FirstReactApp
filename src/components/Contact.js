@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Contactlist from "./Contactlist";
 import Form from "./Form";
 import Button from "./Button";
+import Header from "./Header";
 function Contact() {
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
@@ -36,6 +37,7 @@ function Contact() {
 
   return (
     <div className="app">
+      <Header />
       <div className="app__control-panel">
         <Form addContact={setContacts} contact={contacts} />
         <Button title="Delete" onClick={deleteJob} />
