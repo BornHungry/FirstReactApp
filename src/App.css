@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+* {
+    text-align: center;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.jobdefiniation {
+    width: 400px;
+    padding: 8px;
+    text-align: start;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact-list {
+    display: flex;
+    padding: 6px 0px;
+    list-style-type: none;
+    margin: 15px 0px;
+    background-color: rgba(248, 248, 248, 0.675);
+    height: 72px;
+    border-radius: 8px;
+    border: 1px solid rgba(237, 237, 237, 0.993);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.contact-list li {
+    padding: 0px 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-list__checkbox {
+    width: 20px;
+    /* Genişlik ayarı */
+    height: 20px;
+    /* Yükseklik ayarı */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app {
+    width: 400px;
+    margin: 24px auto;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.app__control-panel {
+    display: flex;
+}
+
+.normal-button {
+    background-color: #007bff;
+    margin: 0px 5px;
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
 }
