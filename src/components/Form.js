@@ -29,17 +29,16 @@ function Form({ addContact, contact }) {
     <>
       {/* <div>// EN SON SEÇİLEN ÖĞELERİ SİLME ÜZERİNE ÇALIŞIYORDUN</div> */}
       <form className="form-element" onSubmit={onSubmit}>
-        <div>
-          <input
-            className="jobdefiniation"
-            name="jobdefiniation"
-            placeholder="Job description"
-            // value değeri en başta boş olduğu için sayfa açıldığğında boş gelecek ve her submit olduğunda tekrardan boşa eşitlenecek
-            value={form.jobdefiniation}
-            // onChange eventi inputtaki değişim eventini kontrol eder.
-            onChange={onChangeInput}
-          />
-        </div>
+        <input
+          className="jobdefiniation"
+          name="jobdefiniation"
+          placeholder="Job description"
+          // value değeri en başta boş olduğu için sayfa açıldığğında boş gelecek ve her submit olduğunda tekrardan boşa eşitlenecek
+          value={form.jobdefiniation}
+          // onChange eventi inputtaki değişim eventini kontrol eder.
+          onChange={onChangeInput}
+        />
+
         {/* <div>
         <input
           name="todo"
@@ -49,7 +48,7 @@ function Form({ addContact, contact }) {
           onChange={onChangeInput}
         />
       </div> */}
-        <div>{/* <button>Add</button> */}</div>
+        {/* <div><button>Add</button></div> */}
       </form>
     </>
   );

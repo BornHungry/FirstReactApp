@@ -62,7 +62,7 @@ function Contactlist({ contacts, updateContact }) {
               {/* <li>{item.todo}</li> */}
             </ul>
             <div className="completed">
-              {item.checkbox ? <strong>Completed</strong> : null}
+              {item.checkbox ? <strong>OK</strong> : null}
             </div>
           </div>
         ))}
