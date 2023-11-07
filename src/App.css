@@ -24,7 +24,7 @@
     align-items: center;
     padding: 6px 0px;
     list-style-type: none;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
     background-color: rgba(248, 248, 248, 0.675);
     height: auto;
     border-radius: 8px;
@@ -170,6 +170,7 @@
 .number-of-jobs {
     text-align: center;
     width: 90%;
+    margin-bottom: 50px;
 }
 
 
