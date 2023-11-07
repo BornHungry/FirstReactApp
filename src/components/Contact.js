@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Contactlist from "./Contactlist";
 import Form from "./Form";
-import Button from "./Button";
 import Header from "./Header";
 import Footer from "./Footer";
 function Contact() {
@@ -41,9 +40,12 @@ function Contact() {
       <Header />
       <div className="app__control-panel">
         <Form addContact={setContacts} contact={contacts} />
-        <Button title="Delete" onClick={deleteJob} />
       </div>
-      <Contactlist contacts={contacts} updateContact={setContacts} />
+      <Contactlist
+        deleteJob={deleteJob}
+        contacts={contacts}
+        updateContact={setContacts}
+      />
       <div className="number-of-jobs">
         <small>
           <strong>{`${priece.length} `} job</strong> to complete

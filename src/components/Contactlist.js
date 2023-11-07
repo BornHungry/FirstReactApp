@@ -1,21 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "./Button";
+function Contactlist({ contacts, updateContact, deleteJob }) {
+  const [filter, setFilter] = useState("all"); // Başlangıçta "Tümünü Göster" olarak ayarlanmıştır
 
-function Contactlist({ contacts, updateContact }) {
-  // const [filterText, setFilterText] = useState("");
-  // const filtered = contacts.filter((item) => {
-  //   return Object.keys(item).some((key) =>
-  //     item[key]
-  //       .toString()
-  //       .toLowerCase()
-  //       .includes(filterText.toLocaleLowerCase())
-  //   );
-  // });
-  // const deneme = (e) => {
-  //   contacts.map((item) => {
-  //     item.checkbox = true;
-  //     console.log(item.checkbox);
-  //   });
-  // };
   const handleCheckboxChange = (index) => {
     const updatedContacts = [...contacts];
     updatedContacts[index] = {
@@ -23,49 +10,65 @@ function Contactlist({ contacts, updateContact }) {
       checkbox: !updatedContacts[index].checkbox,
     };
     updateContact(updatedContacts);
-    if (contacts[index].checkbox) {
-    }
   };
+
+  const filteredContacts = contacts.filter((item) => {
+    if (filter === "completed") {
+      return item.checkbox;
+    } else if (filter === "uncompleted") {
+      return !item.checkbox;
+    } else {
+      return true; // "Tümünü Göster" veya herhangi bir filtre seçilmediğinde
+    }
+  });
 
   return (
     <>
-      {/* <div>
-        <input
-          value={filterText}
-          onChange={(e) => {
-            setFilterText(e.target.value);
-          }}
-        />
-      </div> */}
-      {contacts !== "" &&
-        contacts.map((item, index) => (
-          <div className="list-container">
-            <ul className="contact-list" key={index}>
-              <li>
-                <input
-                  key={index}
-                  className="contact-list__checkbox"
-                  type="checkbox"
-                  checked={item.checkbox}
-                  onChange={() => {
-                    handleCheckboxChange(index);
-                  }}
-                />
-              </li>
+      <div className="button-container">
+        <button className="show-all" onClick={() => setFilter("all")}>
+          Tümünü Göster
+        </button>
+        <button
+          className="show-completed"
+          onClick={() => setFilter("completed")}
+        >
+          Completed
+        </button>
+        <button
+          className="show-uncompleted"
+          onClick={() => setFilter("uncompleted")}
+        >
+          Uncompleted
+        </button>
+        <Button title="Delete" onClick={deleteJob} />
+      </div>
 
-              <li
-                className={` ${item.checkbox ? "strikethrough" : ""} job-title`}
-              >
-                {item.jobdefiniation}
-              </li>
+      {filteredContacts.map((item, index) => (
+        <div className="list-container">
+          <ul className="contact-list" key={index}>
+            <li>
+              <input
+                key={index}
+                className="contact-list__checkbox"
+                type="checkbox"
+                checked={item.checkbox}
+                onChange={() => {
+                  handleCheckboxChange(index);
+                }}
+              />
+            </li>
 
-              {/* <li>{item.todo}</li> */}
-            </ul>
-            <div className="completed">
-              {item.checkbox ? <strong>OK</strong> : null}
-            </div>
+            <li
+              className={` ${item.checkbox ? "strikethrough" : ""} job-title`}
+            >
+              {item.jobdefiniation}
+            </li>
+          </ul>
+          <div className="completed">
+            {item.checkbox ? <strong>OK</strong> : null}
           </div>
-        ))}
+        </div>
+      ))}
     </>
   );
 }

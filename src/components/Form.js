@@ -22,7 +22,7 @@ function Form({ addContact, contact }) {
       return false;
     }
     addContact([...contact, form]);
-    setForm({ jobdefiniation: "" });
+    setForm({ jobdefiniation: "", checkbox: form.checkbox });
   };
 
   return (

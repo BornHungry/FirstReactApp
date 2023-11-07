@@ -5,7 +5,7 @@
 
 
 .form-element {
-    width: 80%;
+    width: 90%;
 }
 
 .list-container {
@@ -17,7 +17,7 @@
 
 .contact-list {
     column-gap: 5px;
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     padding: 6px 0px;
@@ -77,9 +77,16 @@
 }
 
 .normal-button {
-    background-color: #007bff;
+    background-color: #dc3545;
+}
+
+.normal-button,
+.show-all,
+.show-completed,
+.show-uncompleted {
     margin: 0px 2px;
     border: none;
+    padding: 8px 12px;
     border-radius: 5px;
     color: white;
     font-weight: bold;
@@ -87,7 +94,7 @@
 }
 
 .normal-button:hover {
-    background-color: #007bffdb;
+    background-color: #bd2130;
 }
 
 .header-title {
@@ -95,6 +102,41 @@
     padding: 28px;
     text-align: center;
 }
+
+.button-container {
+    width: 90%;
+    margin: 12px 0px;
+}
+
+.button-container>button {
+    margin: 3px;
+}
+
+.show-all {
+    background-color: #007bff;
+}
+
+.show-all:hover {
+    background-color: #006cdf;
+}
+
+.show-completed {
+    background-color: #32ff7e;
+}
+
+.show-completed:hover {
+    background-color: #2cdc6c;
+}
+
+.show-uncompleted {
+    background-color: #ffc107;
+}
+
+.show-uncompleted:hover {
+    background-color: #e0a800;
+}
+
+
 
 
 
