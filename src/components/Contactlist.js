@@ -39,27 +39,32 @@ function Contactlist({ contacts, updateContact }) {
       </div> */}
       {contacts !== "" &&
         contacts.map((item, index) => (
-          <ul className="contact-list" key={index}>
-            <li>
-              <input
-                key={index}
-                className="contact-list__checkbox"
-                type="checkbox"
-                checked={item.checkbox}
-                onChange={() => {
-                  handleCheckboxChange(index);
-                }}
-              />
-            </li>
-            <li className={` ${item.checkbox ? "strikethrough" : ""}`}>
-              {item.jobdefiniation}{" "}
-            </li>
-            <li className="completed">
-              {item.checkbox ? <strong>Completed</strong> : null}
-            </li>
+          <div className="list-container">
+            <ul className="contact-list" key={index}>
+              <li>
+                <input
+                  key={index}
+                  className="contact-list__checkbox"
+                  type="checkbox"
+                  checked={item.checkbox}
+                  onChange={() => {
+                    handleCheckboxChange(index);
+                  }}
+                />
+              </li>
 
-            {/* <li>{item.todo}</li> */}
-          </ul>
+              <li
+                className={` ${item.checkbox ? "strikethrough" : ""} job-title`}
+              >
+                {item.jobdefiniation}
+              </li>
+
+              {/* <li>{item.todo}</li> */}
+            </ul>
+            <div className="completed">
+              {item.checkbox ? <strong>Completed</strong> : null}
+            </div>
+          </div>
         ))}
     </>
   );

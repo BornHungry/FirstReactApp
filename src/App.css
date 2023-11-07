@@ -6,6 +6,53 @@
 
 
 
+
+
+.form-element {
+    width: 100%;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.contact-list {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    padding: 6px 0px;
+    list-style-type: none;
+    margin: 15px 0px;
+    background-color: rgba(248, 248, 248, 0.675);
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(237, 237, 237, 0.993);
+}
+
+.completed {
+    color: #32ff7e;
+    width: 15%;
+
+}
+
+.job-title {
+    width: 90%;
+    /* Maksimum genişlik ayarı */
+    word-wrap: break-word;
+    /* Kelimeleri kır ve sığdır */
+
+
+}
+
+.contact-list__checkbox {
+    grid-area: 1/1/2/2;
+    width: 20px;
+    /* Genişlik ayarı */
+    height: 20px;
+}
+
 .jobdefiniation {
     width: 100%;
     padding: 8px;
@@ -14,31 +61,13 @@
     border: 1px solid gray;
 }
 
-.form-element {
-    width: 100%;
-}
-
-.contact-list {
-    display: flex;
-    padding: 6px 0px;
-    list-style-type: none;
-    margin: 15px 0px;
-    background-color: rgba(248, 248, 248, 0.675);
-    height: 72px;
-    border-radius: 8px;
-    border: 1px solid rgba(237, 237, 237, 0.993);
-}
-
 .contact-list li {
-    padding: 0px 8px;
+    padding: 0px 4px;
+
+
 }
 
-.contact-list__checkbox {
-    width: 20px;
-    /* Genişlik ayarı */
-    height: 20px;
-    /* Yükseklik ayarı */
-}
+
 
 .app {
     width: 30%;
@@ -102,11 +131,7 @@
     color: #fff;
 }
 
-.completed {
-    color: #32ff7e;
-    float: right;
-    margin-left: auto;
-}
+
 
 @media screen and (max-width:768px) {
     .app {
