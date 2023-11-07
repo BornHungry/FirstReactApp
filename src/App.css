@@ -15,7 +15,7 @@
 .list-container {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 10px;
 }
 
 .contact-list {
@@ -33,7 +33,7 @@
 
 .completed {
     color: #32ff7e;
-    width: 15%;
+    width: 8%;
 
 }
 
@@ -126,16 +126,16 @@
 
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:320px) {
     .app {
-        width: 80%;
+        width: 90%;
     }
 
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:768px) {
     .app {
-        width: 80%;
+        width: 90%;
     }
 
 }
