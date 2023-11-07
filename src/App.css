@@ -62,6 +62,11 @@
     border-radius: 5px;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.normal-button:hover {
+    background-color: #007bffdb;
 }
 
 .header-title {
@@ -85,16 +90,26 @@
 
 .footer {
     background-color: rgba(220, 220, 220, 0.473);
-    color: rgb(159, 159, 159);
+    color: rgba(255, 255, 255, 0.781);
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #333;
     /* Footer arkaplan rengi */
-    color: #fff;
     /* Footer metin rengi */
     text-align: center;
     padding: 8px;
     /* Metin ortalaması */
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.781);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+
+    color: #fff;
 }
