@@ -52,8 +52,12 @@ function Contactlist({ contacts, updateContact }) {
               />
             </li>
             <li className={` ${item.checkbox ? "strikethrough" : ""}`}>
-              {item.jobdefiniation}
+              {item.jobdefiniation}{" "}
             </li>
+            <li className="completed">
+              {item.checkbox ? <strong>Completed</strong> : null}
+            </li>
+
             {/* <li>{item.todo}</li> */}
           </ul>
         ))}
