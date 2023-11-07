@@ -26,7 +26,7 @@ function Contactlist({ contacts, updateContact, deleteJob }) {
     <>
       <div className="button-container">
         <button className="show-all" onClick={() => setFilter("all")}>
-          Tümünü Göster
+          All
         </button>
         <button
           className="show-completed"
