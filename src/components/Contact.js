@@ -43,11 +43,12 @@ function Contact() {
         <Form addContact={setContacts} contact={contacts} />
         <Button title="Delete" onClick={deleteJob} />
       </div>
-
       <Contactlist contacts={contacts} updateContact={setContacts} />
-      <small>
-        <strong>{`${priece.length} `} job</strong> left to complete
-      </small>
+      <div className="number-of-jobs">
+        <small>
+          <strong>{`${priece.length} `} job</strong> to complete
+        </small>
+      </div>
       <Footer />
     </div>
   );

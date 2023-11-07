@@ -1,11 +1,7 @@
 * {
-    text-align: center;
     margin: 0px;
     box-sizing: border-box;
 }
-
-
-
 
 
 .form-element {
@@ -18,7 +14,9 @@
     column-gap: 10px;
 }
 
+
 .contact-list {
+    column-gap: 5px;
     width: 80%;
     display: flex;
     align-items: center;
@@ -38,8 +36,9 @@
 }
 
 .job-title {
+    padding-right: 20px;
+    padding-left: 4px;
     width: 90%;
-    padding: 0px 4px;
     /* Maksimum genişlik ayarı */
     word-wrap: break-word;
     /* Kelimeleri kır ve sığdır */
@@ -50,7 +49,7 @@
 .contact-list__checkbox {
     grid-area: 1/1/2/2;
     width: 20px;
-    /* Genişlik ayarı */
+    margin-left: 5px;
     height: 20px;
 }
 
@@ -122,6 +121,11 @@
 .footer-link:hover {
 
     color: #fff;
+}
+
+.number-of-jobs {
+    text-align: center;
+    width: 90%;
 }
 
 
