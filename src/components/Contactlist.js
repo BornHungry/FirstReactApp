@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "./Button";
 function Contactlist({ contacts, updateContact, deleteJob }) {
   const [filter, setFilter] = useState("all"); // Başlangıçta "Tümünü Göster" olarak ayarlanmıştır
-
   const handleCheckboxChange = (index) => {
     const updatedContacts = [...contacts];
     updatedContacts[index] = {
@@ -11,7 +10,8 @@ function Contactlist({ contacts, updateContact, deleteJob }) {
     };
     updateContact(updatedContacts);
   };
-
+  const completedCount = contacts.filter((item) => item.checkbox);
+  const uncompletedCount = contacts.filter((item) => !item.checkbox);
   const filteredContacts = contacts.filter((item) => {
     if (filter === "completed") {
       return item.checkbox;
@@ -26,25 +26,25 @@ function Contactlist({ contacts, updateContact, deleteJob }) {
     <>
       <div className="button-container">
         <button className="show-all" onClick={() => setFilter("all")}>
-          All
+          All ({contacts.length})
         </button>
         <button
           className="show-completed"
           onClick={() => setFilter("completed")}
         >
-          Completed
+          Completed ({completedCount.length})
         </button>
         <button
           className="show-uncompleted"
           onClick={() => setFilter("uncompleted")}
         >
-          Uncompleted
+          Uncompleted ({uncompletedCount.length})
         </button>
         <Button title="Delete" onClick={deleteJob} />
       </div>
 
       {filteredContacts.map((item, index) => (
-        <div className="list-container">
+        <div className="list-container" key={index}>
           <ul className="contact-list" key={index}>
             <li>
               <input
